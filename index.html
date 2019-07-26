@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <title>Adka28 - First Game</title>
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="js/scripts.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 pageHeader text-center">
+                <h1>Gold Runner</h1>
+            </div>
+        </div>
+        <div class="row pageContent">
+            <div class="col pageNavigation">
+                <h4>About Gold Runner</h4>
+                <h6>Created by</h6>
+                <a href="https://adka28.github.io/MyPortfolio/">Andrea Szaboova</a>
+            </div>
+            <div class="col pageApplication">
+                    <h4>Lets play!</h4>
+                <p>
+                    Move the blue square through maze onto the red square and collect the gold. 
+                    Beware of deadly brown traps. Keep healthy with green squares. Try pink surprise!
+                </p>
+                 <p>
+                     Use one or more of the following commands: u - Up, d - Down, r - Right, l - Left.
+                    <br>
+                    For example, command "ddru" will move two cells down, then one to the right and one up.
+                    <br>
+                    The best Gold Runner can collect all the gold!
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <canvas id="gameCanvas" width="300px" height="300px">
+                        </canvas>
+                    </div>
+                    <div class="col">
+                        <h3>Game State</34>
+                        <h4>Gold:</h4>
+                        <p>Collected <span id="stateGold"></span> gold</p>
+                        <h4>Lives:</h4>
+                        <p>You have <span id="stateLives"></span> lives left</p>
+                        <div id="stateFinished">
+                            <h4>Finished!</h4>
+                            <p>Congratulations GoldRunner!</p>
+                        </div>
+                        <div id="stateFailed">
+                            <h4>Game Over!</h4>
+                            <p>Sorry for that! No more lives left. Try again.</p>
+                        </div>
+                    </div>
+                </div>
+                <form id="appForm">
+                    <div class="row">
+                        <div class="col">
+                            <label for="commands">
+                                <h5>
+                                    <strong>Commands for Runner</strong>
+                                </h5>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input id="commands" class="form-control" type="text">
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary">Run!</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
